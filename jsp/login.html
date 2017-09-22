@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+</head>
+
+<body>
+  <form method="post" action="./login.jsp">
+    <table border="1" width="400" align="center">
+      <tr>
+        <td>아이디</td>
+        <td><input type="text" name="id"></input>
+        </td>
+      </tr>
+      <tr>
+        <td>비밀번호</td>
+        <td><input type="text" name="pwd"></input>
+        </td>
+      </tr>
+      <tr>
+        <td>취미</td>
+        <td>
+          <input type="checkbox" name="hobby" value="여행" />여행
+          <input type="checkbox" name="hobby" value="낚시" />낚시
+          <input type="checkbox" name="hobby" value="음악" />음악
+          <input type="checkbox" name="hobby" value="낮잠" />낮잠
+
+        </td>
+      </tr>
+      <tr>
+        <td>사는곳</td>
+        <td>
+          <input type="radio" name="addr" value="서울" />서울
+          <input type="radio" name="addr" value="경기" />경기
+          <input type="radio" name="addr" value="광주" />광주
+          <input type="radio" name="addr" value="기타" />기타
+
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" value="로그인"></input>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
