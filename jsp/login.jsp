@@ -20,7 +20,7 @@
           <%= pwd %>
           <br>
             회원님의 취미 :
-            <%= hobby %>
+            <%= hobby %>입니다
           </div>
         </body>
       </html>
