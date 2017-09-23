@@ -21,7 +21,6 @@
           <br>
             회원님의 취미 :
             <%= hobby %>
-            dddddㅇㅇㅇ
           </div>
         </body>
       </html>
