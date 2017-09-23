@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+		<title>게시판</title>
+
+	<style>
+	body{
+		background-color: #FFEFA5;
+	}
+	h1{
+		text-align: center;
+		font-family: '나늠스퀘어';
+		font-size: 60px;
+	}
+	table{
+		background-color: #FDFFD8;
+		font-weight:bold;
+		font-family: '나눔바른고딕';
+	}
+	</style>
+	</head>
+
+	<body>
+	<h1>글쓰기</h1>
+	<table border="1" style="width:60%" align="center">
+		<tr>
+		<td><p>제목</p></td>
+		<td align="center"><textarea autofocus required wrap="hard" placeholder="제목을 입력하세요" rows="1" cols="100"></textarea></textarea></td>
+		</tr>
+		<tr>
+		<td><p>글쓴이</p></td>
+		<td align="center"><textarea autofocus required wrap="hard" placeholder="글쓴이를 입력하세요" rows="1" cols="100"></textarea></td>
+		</tr>
+		<tr>
+		<td>내용</td><td><center><textarea autofocus required wrap="hard" placeholder="내용을 입력하세요" rows="50" cols="100"></textarea></center></td>
+		</tr>
+		<tr>
+		<td></td>
+		<td align="center"><form><input name="Submit" type="submit" onClick="alert('작성이 완료되었습니다')" value="제출">
+		</form></td>
+		</tr>
+
+	</table>
+	
+	</body>
+</html>
+
