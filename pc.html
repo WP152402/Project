@@ -1,0 +1,196 @@
+<HTML>
+ <HEAD><TITLE>회원가입</TITLE>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <script src="regist.js"></script>
+ </HEAD>
+ <BODY>
+  <center>
+  <form name="f" action="http://naver.com" method="post">
+   <p>회 원 가 입</p>
+   <table width=650 class="outline" cellspacing=0 cellpadding=7>
+    <tr>
+     <td width=150 class="c1">* 아이디</td>
+  <td width=500 class="c2"><input type="text" name="id" class="box">&nbsp;&nbsp;아이디는 소문자, 숫자 혼용하여 6~12자 까지 가능</td>
+ </tr>
+ <tr>
+     <td width=150 class="c1">* 성명</td>
+  <td width=500 class="c2"><input type="text" name="irum" class="box"></td>
+ </tr>
+ <tr>
+     <td width=150 class="c1">* 비밀번호</td>
+  <td width=500 class="c2"><input type="password" name="pw1" class="box"></td>
+ </tr>
+ <tr>
+     <td width=150 class="c1">* 비밀번호 확인</td>
+  <td width=500 class="c2"><input type="password" name="pw2" class="box"></td>
+ </tr>
+ <tr>
+     <td width=150 class="c1">* 주민번호</td>
+  <td width=500 class="c2"><input type="text" name="sn1" maxlength=6 class="box"> - 
+                <input type="password" name="sn2" maxlength=7 class="box"></td>
+ </tr>
+ <tr>
+     <td width=150 class="c1">* 성별</td>
+  <td width=500 class="c2"><input type="radio" name="se" value="man">남성&nbsp; 
+                <input type="radio" name="se" value="woman">여성</td>
+ </tr>
+ <tr>
+     <td width=150 class="c1">* 연락처</td>
+  <td width=500 class="c2">
+  <select name="hp1" class="box">
+   <option value="010">010
+   <option value="011">011
+   <option value="016">016
+   <option value="017">017
+   <option value="018">018
+   <option value="019">019
+  </select> - <input type="text" name="hp2" maxlength=4 class="box"> - <input type="text" name="hp3" maxlength=4 class="box">
+  </td>
+ </tr>
+ <tr>
+     <td width=150 class="c1">* 우편 번호</td>
+  <td width=500 class="c2"><input type="text" name="zip1" size=10 class="box"> - <input type="text" name="zip2" size=10 class="box">&nbsp;&nbsp;<A HREF="#">[주소찾기]</A></td>
+ </tr>
+ <tr>
+     <td width=150 class="c1">* 나머지 주소</td>
+  <td width=500 class="c2"><input type="text" name="adress" size=50 class="box"></td>
+ </tr>
+ <tr>
+     <td width=150 class="c1">* 자기소개</td>
+  <td width=500 class="c2"><textarea name="profile" cols=40 rows=5 class="box">간단히 소개하세요!!</textarea></td>
+ </tr>
+ <tr>
+   <td colspan=2 align=center>
+   <A HREF="javascript:sendIt()">[전송]</A>&nbsp;&nbsp;
+   <A HREF="javascript:document.f.reset()">[취소]</A>
+   </td>
+ </tr>
+<script language="javascript">
+ function sendIt(){
+//아이디 입력여부 검사
+if(document.f.id.value=="")
+{
+ alert("아이디를 입력하지 않았습니다.")
+ document.f.id.focus()
+ return
+}
+//아이디 유효성 검사 (영문소문자, 숫자만 허용)
+for (i=0;i<document.f.id.value.length ;i++ )
+{
+ ch=document.f.id.value.charAt(i)
+  if (!(ch>='0' && ch<='9') && !(ch>='a' && ch<='z'))
+  {
+  alert ("아이디는 소문자, 숫자만 입력가능합니다.")
+  document.f.id.focus()
+  document.f.id.select()
+  return
+  }
+}
+//아이디에 공백 사용하지 않기
+if (document.f.id.value.indexOf(" ")>=0)
+{
+ alert("아이디에 공백을 사용할 수 없습니다.")
+ document.f.id.focus()
+ document.f.id.select()
+ return
+}
+//아이디 길이 체크 (6~12자)
+if (document.f.id.value.length<6 || document.f.id.value.length>12)
+{
+ alert ("아이디를 6~12자까지 입력해주세요.")
+ document.f.id.focus()
+ document.f.id.select()
+ return
+}
+//비밀번호 입력여부 체크
+if(document.f.pw1.value=="")
+{
+ alert("비밀번호를 입력하지 않았습니다.")
+ document.f.pw1.focus()
+ return
+}
+//비밀번호 길이 체크(4~8자 까지 허용)
+if (document.f.pw1.value.length<4 || document.f.pw1.value.length>8)
+{
+ alert ("비밀번호를 4~8자까지 입력해주세요.")
+ document.f.pw1.focus()
+ document.f.pw1.select()
+ return
+}
+
+//비밀번호와 비밀번호 확인 일치여부 체크
+if (document.f.pw1.value!=document.f.pw2.value)
+{
+ alert("비밀번호가 일치하지 않습니다")
+ document.f.pw1.value=""
+ document.f.pw2.value=""
+ document.f.pw1.focus()
+ return
+}
+//주민번호 오류 검사
+/*
+str1=document.f.sn1.value
+str2=document.f.sn2.value
+str=str1+str2
+hap=0
+hap=hap+parseInt(str.charAt(0))*2
+hap=hap+parseInt(str.charAt(1))*3
+hap=hap+parseInt(str.charAt(2))*4
+hap=hap+parseInt(str.charAt(3))*5
+hap=hap+parseInt(str.charAt(4))*6
+hap=hap+parseInt(str.charAt(5))*7
+hap=hap+parseInt(str.charAt(6))*8
+hap=hap+parseInt(str.charAt(7))*9
+hap=hap+parseInt(str.charAt(8))*2
+hap=hap+parseInt(str.charAt(9))*3
+hap=hap+parseInt(str.charAt(10))*4
+hap=hap+parseInt(str.charAt(11))*5
+z=(hap%11)
+z=11-z
+if (z==10) {z=0}
+if (z==11) {z=1}
+if (z!=parseInt(str.charAt(12))) 
+{
+ alert ("틀린 주민등록번호입니다.")
+ return
+}
+*/
+ju1=document.f.sn1.value
+ju2=document.f.sn2.value
+jumin=ju1+ju2
+key="234567892345"
+sum=0
+for (i=0;i<key.length ;i++ )
+{
+ sum+=parseInt(jumin.charAt(i))*parseInt(key.charAt(i))
+}
+na=(11-(sum%11))%10
+if (jumin.charAt(12)!=na)
+{
+ alert("틀린 주민등록번호입니다.")
+ document.f.sn1.value=""
+ document.f.sn2.value=""
+ document.f.sn1.focus()
+ return
+}
+ 
+
+//성별 체크 유무 확인
+if (document.f.se[0].checked==false && document.f.se[1].checked==false)
+{
+ alert("성별을 체크해 주세요")
+ return
+}
+ 
+document.f.submit()
+}
+ </script>
+ 
+   </table> 
+   </form>
+   </center>
+ </BODY>
+</HTML>
+ 
+ 
+ 

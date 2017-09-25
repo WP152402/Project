@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Form</title>
+	</head>
+	<style type="text/css">
+		div.box{
+			border:10px ridge #66BCD6;
+			padding-top: 5%;
+			padding-bottom: 5%;
+			margin-right:30%;
+			margin-left: 30%;
+		}
+		body{
+
+			font-family: '나눔스퀘어';
+			font-size:15px;
+			background-color: #F1FBFC;
+		}
+		.x{
+			color: black;
+			font-family: '나눔바른고딕';
+			font-weight: 700;
+
+		}
+		table td {
+			border: 3px ridge white ;
+			text-align: center;
+		}
+		h1{
+			text-align: center;
+			font-weight:900;
+			font-size: 60px;
+			color:#333095;
+			letter-spacing: 2px;
+		}
+		div{
+	background-color: #E6FAFB;
+}
+		</style>
+	<body>
+		<h1>[회원가입]</h1>
+		<div class="box"><center><table width="300">
+			<tbody>
+		<tr bgcolor="#C0E7F3"><td height="100"><p class="x">[이름 입력]</p>
+		<form name="a" action="./b.php" method="POST">
+			<input type="text" name="name" placeholder="이름">
+			<br><br></td></tr>
+
+		<tr bgcolor="D8F0F8"><td height="100"><p class="x">[나이 입력]</p>
+		<form  name="a" action="./b.php" method="POST">
+			<input type="text" name="age" placeholder="나이">
+			<br><br></td></tr>
+
+		<tr bgcolor="EFF9FC"><td height="100"><p class="x">[성별 선택]</p>
+			남자<input type="radio" name="sex" value="남자"><br>
+			여자<input type="radio" name="sex" value="여자"><br>
+			<br></td></tr>
+		<tr bgcolor="#C0E7F3"><td height="100"><p class="x">[주민번호 입력]</p>
+		<form name="a" action="./b.php" method="GET">
+			<input type="text" name="secret" size="10"> -
+		<form name="a" action="./b.php" method="GET">
+			<input type="password" name="secret" size="10">
+			<br><br></td></tr>
+
+		<tr bgcolor="FAFDFE"><td height="100"><p class="x">[학교 입력]</p>
+		<form  name="a" action="./b.php" method="POST">
+			<input type="text" name="school" placeholder="학교">
+			<br><br></td></tr>
+		<tr bgcolor="F7FBFA"><td height="100"><p class="x">[전화번호 입력]</p><form action="./b.php" method="POST">
+			<input type="text" name="phone" placeholder="전화번호">
+			<br><br></td></tr>
+		<tr bgcolor="E6F8FF"><td height="100"><p class="x">[아이디 입력]</p>
+		<form  name="a" action="./b.php" method="POST">
+			<input type="text" name="id" placeholder="아이디">
+			<br><br></td></tr>
+		<tr bgcolor="E2F4FC"><td height="100"><p class="x">[닉네임 입력]</p><form action="./b.php" method="POST">
+			<input type="text" name="nik" placeholder="닉네임">
+			<br><br></td></tr>
+		<tr bgcolor="EEFFEE"><td height="100"><p class="x">[비밀번호 입력]</p><form action="./b.php" method="GET">
+			<input type="password" name="pw" placeholder="비밀번호">
+			<br><br></td></tr>
+
+		<tr bgcolor="EEFFEE"><td height="100"><p class="x">[비밀번호 다시 입력]</p>
+		<form action="./b.php" method="GET">
+			<input type="password" name="pwcheck" placeholder="비밀번호확인"><br>
+			<input type="submit" value="확인"ㄴ><br><br></td></tr>
+
+		</form>	</center></div>
+
+
+		</div>
+	</body>
+</html>
+
+<!-- .b/php=값을 받을 메세지 POST=메소드>
+<!--table td:nth-child(2) {
+			border-bottom: 0;-->
