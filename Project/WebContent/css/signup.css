@@ -1,0 +1,21 @@
+h1{
+	text-align: center;
+	margin-top : 40px;
+}
+.container{
+	text-align : center;
+	margin-top : 50px;
+}
+#signupForm input{
+	margin-bottom : 20px;
+	width : 350px;
+	border : none;
+	border-bottom : 1px solid black;
+}
+input [type="button"]{
+	background-color : white;
+	border: 2px solid black;
+}
+input:focus{
+	outline : none;
+}

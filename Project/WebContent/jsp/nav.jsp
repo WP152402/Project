@@ -4,7 +4,7 @@ pageEncoding="UTF-8"%>
         <ul class="nav nav-tabs">
        <%if(session.getAttribute("user")==null){ %>
        <li class="nav-item">
-         <span class="nav-link" id="signbut">회원가입</span>
+         <a class="nav-link" id="signbut" href="signup.jsp">회원가입</a>
        </li>
        <li class="nav-item">
          <span class="nav-link"id="loginbut">로그인</span>
