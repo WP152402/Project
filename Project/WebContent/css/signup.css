@@ -1,21 +1,21 @@
-h1{
-	text-align: center;
-	margin-top : 40px;
-}
+
 .container{
 	text-align : center;
 	margin-top : 50px;
+	opacity : 0;
 }
-#signupForm input{
+.button{
+	width : 100px;
+	background-color : white;
+	border: 1px solid black;
+}
+input{
 	margin-bottom : 20px;
 	width : 350px;
 	border : none;
 	border-bottom : 1px solid black;
 }
-input [type="button"]{
-	background-color : white;
-	border: 2px solid black;
-}
+
 input:focus{
 	outline : none;
 }

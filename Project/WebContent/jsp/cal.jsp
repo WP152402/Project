@@ -10,21 +10,30 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../css/cal.css">
+<link rel="stylesheet" href="${contextPath }/css/cal.css">
 <script src="${contextPath }/js/cal.js"></script>
+<script src="${contextPath }/js/script.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
 <header>
 <h1 class="head">일정 관리</h1>
-<div id="today1">
+</header>
+<div class="mom">
+<div id="today3">
 <h2 class="title">오늘의 일정</h2>
-<ul style="list-style-image: ">
+<ul id="list">
 <li>Test</li>
+<li>Test2</li>
 </ul>
 </div>
-</header>
+<div id="today2">
+<h2 class="title">한눈에 보기</h2>
+<div id="kCalendar"></div>
+</div>
+</div>
+<%@ include file="footer.jsp" %>
 </body>
+
 </html>

@@ -16,8 +16,13 @@ $(document).ready(function(){
 					alert('회원가입이 완료되었습니다');
 					location.href="index.jsp";
 				}else if(data.msg=="notequal"){
-					alert('비밀번호와 비밀번호 확인란이 일치하지 않습니다');
+					$('#pwcheck').val("");
+					alert('비밀번호와 비밀번호 확인란이 일치하지 않습니다!');
 				}
 			});
 	});
+	$('.container').fadeTo(300, 1);
+	$('#previous').click(function(){
+		history.back();
+	})
 });
