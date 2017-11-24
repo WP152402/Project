@@ -3,7 +3,6 @@ html{
 }
 body{
 	background-color:#183b4b;
-	overflow : hidden;
 	font-family : '나눔바른고딕', '돋움';
 }
 .weather{
