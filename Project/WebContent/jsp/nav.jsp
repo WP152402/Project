@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@ page import = "org.dimigo.vo.UserVO" %>
+<%
+    	UserVO user = (UserVO)session.getAttribute("user");
+    %>
 <nav class="nav">
         <ul class="nav nav-tabs">
        <%if(session.getAttribute("user")==null){ %>
@@ -11,7 +15,7 @@ pageEncoding="UTF-8"%>
        </li> 
        <%}else{ %>
        <li style="float:right" class="nav-item">
-       <span class="nav-link"id="user"><%= session.getAttribute("user") %>님</span>
+       <span class="nav-link"id="user"><%= user.getName() %>님</span>
        </li>
        <li class="">
        <form action="/Project/logout" method="POST">

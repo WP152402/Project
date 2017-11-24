@@ -5,19 +5,15 @@ body{
 	overflow : hidden;
 	font-family : '나눔바른고딕', '돋움';
 }
-.head{
-	color : #CCD8DF;
-	margin-left : 50px;
-	margin-top : 30px;
-	opacity : 0;
-}
 #today3{
-	height : 300px;
-
+	min-height : 360px;
+	max-height : 700px;
+	padding-left : 40px;
 }
 #today2{
 	height : 600px;
 	margin-left : 40px;
+	padding-left : 40px;
 }
 .mom{
 	overflow: hidden;
@@ -32,30 +28,33 @@ body{
 	color : white;
 }
 .title{
-	margin-left : 30px; margin-top : 30px;
-}
-.back{
-	color : white;
-	font-size : 20px;
-	margin-left :  70px;
-	cursor : pointer;
-	margin-top : 15px;
+	margin-top : 30px;
 }
 #list{
 	list-style-image:url('../img/check.png');
 	margin-left : 20px;
+}
+input{
+	background-color : rgba(0,0,0,0);
+	color : white;
+	border : none;
+	border-bottom : 1px solid #c5edff;
+	margin-left : 10px;
+}
+input[type="submit"]{
+	margin-left : 60px;
 }
 /* Kurien / Kurien's Blog / http://blog.kurien.co.kr */
 /* 주석만 제거하지 않는다면, 어떤 용도로 사용하셔도 좋습니다. */
 
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-#kCalendar {width: 250px; height: 250px; border: 1px solid black; margin-left : 33.1%; margin-top : 30px;font-family: 'Nanum Gothic', serif;}
+#kCalendar {border: none; margin-left : 10%; margin-top : 30px;font-family: 'Nanum Gothic', serif;}
 
-#kCalendar #header {height: 50px; line-height: 50px; text-align: center; font-size: 18px; font-weight: bold}
-#kCalendar .button {color: #000; text-decoration: none;}
+#kCalendar #header {height: 50px; line-height: 50px; text-align: left; margin-left : 10px; font-size: 18px; font-weight: bold}
+#kCalendar .button2 {color: #1ec0ff; text-decoration: none;}
 
-#kCalendar table {width: 250px; height: 200px;}
+#kCalendar table {width: 500px; height: 400px;}
 #kCalendar caption {display: none;}
 
 #kCalendar .sun {text-align: center; color: deeppink;}

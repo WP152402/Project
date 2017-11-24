@@ -10,18 +10,16 @@ textarea{
 	resize : none;
 	color : white;
 }
-.head{
-	margin-left : 50px;
-	margin-top : 30px;
-	opacity : 0;
+#listButton{
+	background-color: rgba(0,0,0,0);
+	border : none;
+	color :white;
 }
 #today1{
 	margin-top : 40px;
 	width : 40%;
-	height : 500px;
 	border : 2px solid #49919e;
 	opacity : 0;
-	float : left;
 	padding-left : 40px;
 }
 .title{
@@ -38,44 +36,35 @@ textarea{
 .text:focus{
 	outline : none;
 }
-.button{
-	margin-left : 87%;
-	background-color : rgba(0,0,0,0);
-	border : none;
-	border-bottom : 1px solid #74a7be;
-	width : 55px;
-	color : white;
-}
-.button:focus{
-	outline : none;
-}
-.button:hover{
-	font-weight : 900;
-}
-.back{
-	color : white;
-	font-size : 20px;
-	margin-left :  70px;
-	cursor : pointer;
-	margin-top : 15px;
-}
+
 #diaryList{
-	float : left;
 	text-align: center;
-	margin-left : 40px;
-	margin-top : 40px;
-	padding-top : 40px;
-	width : 40%; height : 500px;
+	margin-left : 20px;
+	margin-right : 20px;
+	width : 20%;
 	border : 1px solid #3c718a;
 	opacity : 0;
+}
+#showDiary{
+	text-align: center;
+	width : 20%; 
+	border : 1px solid #4f7894;
+	opacity : 0;
+	padding : 30px;
 }
 .contain{
 	overflow : hidden;
 }
 .table{
 	width : 90%;
-	margin-left : 40px;
+	margin-left : 20px;
 	border : 1px solid white;
+}
+.contain>div{
+	margin-top : 40px;
+	padding-top : 40px;
+	height : 600px;
+	float : left;
 }
 input[name="title"]{
 	padding-top : 20px;
@@ -86,11 +75,8 @@ input[name="title"]{
 	margin-bottom : 15px;
 	color : white;
 }
-input:focus{
-	outline:none;
-}
 #word{
-	margin-top : 230px;
+	margin-top : 100px;
 	margin-left : 30px;
 	font-size : 40px;
 	font-family : '나눔스퀘어';

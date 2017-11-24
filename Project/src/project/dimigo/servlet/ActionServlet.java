@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import project.dimigo.action.CalAction;
+import project.dimigo.action.Delete2Action;
+import project.dimigo.action.DeleteAction;
+import project.dimigo.action.GetAction;
 import project.dimigo.action.IAction;
 import project.dimigo.action.ListAction;
 import project.dimigo.action.LoginAction;
@@ -30,6 +34,10 @@ public class ActionServlet extends HttpServlet {
     	map.put("logout", new LogoutAction());
     	map.put("signup", new SignupAction());
     	map.put("list", new ListAction());
+    	map.put("get", new GetAction());
+    	map.put("cal", new CalAction());
+    	map.put("delete", new DeleteAction());
+    	map.put("delete2", new Delete2Action());
     }
     /**
      * @see HttpServlet#HttpServlet()
@@ -69,7 +77,7 @@ public class ActionServlet extends HttpServlet {
 		}catch(Exception e) {
 			e.printStackTrace();
 			request.setAttribute("error", e.getMessage());
-			RequestDispatcher rd = request.getRequestDispatcher("jsp/error.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/jsp/error.jsp");
 			rd.forward(request, response);
 		}
 	}

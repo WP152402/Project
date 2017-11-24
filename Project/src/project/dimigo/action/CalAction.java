@@ -6,20 +6,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.dimigo.service.UserService;
 
-import project.dimiog.user.DiaryList;
-
-public class ListAction implements IAction{
+public class CalAction implements IAction{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		DiaryList list = new DiaryList();
 		request.setCharacterEncoding("utf-8");
-		String diary = request.getParameter("diary");
-		String title = request.getParameter("title");
-		System.out.println("제목 : " + title + "\n 내용 : " + diary);
+		String text = request.getParameter("text");
+		String date = request.getParameter("date");
+		System.out.println(text + "\n" + date);
 		UserService service = new UserService();
-		service.diary(diary, title);
-		response.sendRedirect("diary.jsp");
+		service.insertCal(text, date);
+		response.sendRedirect("cal.jsp");
 	}
 
 }

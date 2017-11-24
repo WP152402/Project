@@ -31,4 +31,9 @@ public class DiaryList {
 	public DiaryList() {
 		
 	}
+	@Override
+	public String toString() {
+		return "DiaryList [title=" + title + ", text=" + text + ", date=" + date + "]";
+	}
+	
 }

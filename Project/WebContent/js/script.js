@@ -54,9 +54,9 @@ function kCalendar(id, date) {
 	var calendar = '';
 	
 	calendar += '<div id="header">';
-	calendar += '			<span><a href="#" class="button left" onclick="kCalendar(\'' +  id + '\', \'' + prevDate + '\')"><</a></span>';
+	calendar += '			<span><a href="#" class="button2 left" onclick="kCalendar(\'' +  id + '\', \'' + prevDate + '\')"><</a></span>';
 	calendar += '			<span id="date">' + currentYear + '년 ' + currentMonth + '월</span>';
-	calendar += '			<span><a href="#" class="button right" onclick="kCalendar(\'' + id + '\', \'' + nextDate + '\')">></a></span>';
+	calendar += '			<span><a href="#" class="button2 right" onclick="kCalendar(\'' + id + '\', \'' + nextDate + '\')">></a></span>';
 	calendar += '		</div>';
 	calendar += '		<table border="0" cellspacing="0" cellpadding="0">';
 	calendar += '			<caption>' + currentYear + '년 ' + currentMonth + '월 달력</caption>';
@@ -92,3 +92,9 @@ function kCalendar(id, date) {
 	
 	kCalendar.innerHTML = calendar;
 }
+$(document).ready(function(){
+	$("#kCalendar").fadeTo(600);
+	$('.button').click(function(){
+		$("#kCalendar").fadeTo(600);
+	});
+});

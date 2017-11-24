@@ -5,6 +5,9 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.dimigo.service.UserService;
+import org.dimigo.vo.UserVO;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
@@ -20,8 +23,15 @@ public class LoginAction implements IAction{
 		PrintWriter out = response.getWriter();
 		Gson gson = new Gson();
 		JsonObject obj = new JsonObject();
-		if(id.equals("admin")&&pwd.equals("admin")) {
-			request.getSession().setAttribute("user", "고영은");
+		UserService service = new UserService();
+		UserVO vo = new UserVO();
+		vo.setId(id);
+		vo.setPwd(pwd);
+		
+		UserVO result = service.login(vo);
+		if(result!=null) {
+			
+			request.getSession().setAttribute("user", result);
 			obj.addProperty("msg", "success");
 			out.write(gson.toJson(obj));
 		}
